@@ -1,5 +1,9 @@
 # bcommerce
 
+## Scratch notes below, CyberDuck sucks and doesn't work with BigCommerce even though BigCommerce highly recommends it 🤔
+
+## Use SmartFTP as an alternative
+
 ## Source: [BigCommerce WebDAV Documentation](https://support.bigcommerce.com/articles/Public/File-Access-WebDAV/?_ga=2.123956298.1363489839.1534794440-2090424515.1532551091#login-info)
 
 
