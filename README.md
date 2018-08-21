@@ -54,7 +54,7 @@ You may need to uncheck the Anonymous Login check box to input your username and
 
 4. Click Connect. When the login is successful, you will see your store's folders.
 
-1{alt text](https://support.bigcommerce.com/servlet/rtaImage?eid=ka61B00000006Lz&feoid=00N1300000BR3CT&refid=0EM1B0000005nGK)
+![alt text](https://support.bigcommerce.com/servlet/rtaImage?eid=ka61B00000006Lz&feoid=00N1300000BR3CT&refid=0EM1B0000005nGK)
 
 5. Once you are logged in, make sure you have set the following settings:
 Under Edit › Preferences under the General tab, ensure that the checkbox next to "Save Workspace" is unchecked.
