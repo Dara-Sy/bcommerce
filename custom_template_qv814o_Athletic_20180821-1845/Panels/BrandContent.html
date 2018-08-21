@@ -1,0 +1,20 @@
+%%SNIPPET_CategorySortBox%%
+
+<h1>%%GLOBAL_TrailBrandName%%</h1>
+
+%%SNIPPET_BrandPaging%%
+
+<form name="frmCompare" id="frmCompare" action="%%GLOBAL_CompareLink%%" method="get" onsubmit="return compareProducts('%%GLOBAL_CompareLink%%')">
+	%%Panel.BrandProductListing%%
+	
+	<div class="right-button" style="display:%%GLOBAL_HideCompareItems%%">
+		<input class="secondary button right" type="submit" value="%%LNG_CompareSelected%%">
+	</div>
+</form>
+<div class="PagingBottom">
+	%%SNIPPET_BrandPaging%%
+</div>
+
+<script>
+	$('.RowDivider').remove();
+</script>

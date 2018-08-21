@@ -1,0 +1,113 @@
+<div class="alert-box">
+	%%GLOBAL_ProductReviewFlashMessages%%
+	<a href="" class="close">&times;</a>
+</div>
+
+<a id="write_review"></a>
+
+<form action="%%GLOBAL_ShopPath%%/postreview.php" style="display: none;" method="post" class="ProductReviewForm panel"
+	  id="rating_box" onsubmit="return check_product_review_form();">
+	<input type="hidden" name="action" value="post_review"/>
+	<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%"/>
+	<input type="hidden" name="throttleToken" value="%%GLOBAL_throttleToken%%"/>
+
+	<h4 class="subheader">%%LNG_WriteYourOwnReview%%</h4>
+
+	<div class="row">
+		<div class="four columns">
+			<label class="right inline">%%LNG_HowRateProduct%%</label>
+		</div>
+		<div class="eight columns">
+			<select name="revrating" class="Field400" id="revrating">
+				<option value="">&nbsp;</option>
+				<option value="1"
+					%%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+				<option value="2"
+					%%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+				<option value="3"
+					%%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+				<option value="4"
+					%%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>						
+				<option value="5"
+					%%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="four columns">
+			<label class="right inline">%%LNG_WriteAHeadline%%</label>
+		</div>
+		<div class="eight columns">
+			<input name="revtitle" id="revtitle" type="text"
+							   value="%%GLOBAL_RevTitle%%">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="four columns">
+			<label class="right inline">%%LNG_WriteYourReview%%</label>
+		</div>
+		<div class="eight columns">
+			<textarea name="revtext" id="revtext" rows="8"
+								  cols="50">%%GLOBAL_RevText%%</textarea>
+		</div>
+	</div>
+
+	<div class="row" style="display: %%GLOBAL_HideReviewEmail%%">
+		<div class="four columns">
+			<label class="right inline">%%LNG_ReviewEnterYourEmail%%</label>
+		</div>
+		<div class="eight columns">
+            <input type="text" name="email" id="email" value="%%GLOBAL_CustomerEmail%%"></input>
+            <p class="ReviewEmailHint">%%LNG_ReviewEmailHint%%</p>
+        </div>
+    </div>
+	
+	<div class="row">
+		<div class="four columns">
+			<label class="right inline">%%LNG_ReviewEnterYourName%%</label>
+		</div>
+		<div class="eight columns">
+			<input name="revfromname" id="revfromname" type="text"
+							   value="%%GLOBAL_RevFromName%%"/>
+		</div>
+	</div>
+	
+	<div class="row" style="display: %%GLOBAL_HideReviewCaptcha%%;margin-bottom:15px;">
+		<div class="twelve columns">
+			<label class="left inline captcha-label">%%LNG_EnterTheCodeBelow%%</label>
+		</div>
+		<div class="twelve columns">
+			<script type="text/javascript"
+					src="https://www.google.com/recaptcha/api/challenge?k=%%GLOBAL_ReCaptchaAPIKeyPublic%%">
+			</script>
+			<noscript>
+				<iframe src="https://www.google.com/recaptcha/api/noscript?k=%%GLOBAL_ReCaptchaAPIKeyPublic%%"
+						height="300" width="500" frameborder="0"></iframe>
+				<br>
+				<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+				</textarea>
+				<input type="hidden" name="recaptcha_response_field"
+					   value="manual_challenge">
+			</noscript>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="twelve columns">
+			<input type="submit" class="right button" value="%%LNG_SaveMyReview%%"/>
+		</div>
+	</div>
+
+</form>
+
+<p style="display: %%GLOBAL_HideNoReviewsMessage%%">
+	%%GLOBAL_NoReviews%%
+</p>
+
+<p><a href="#" class="show-review-form button">Write A Review</a></p>
+
+%%GLOBAL_ProductReviewPaging%%
+%%GLOBAL_ProductReviewList%%
+%%GLOBAL_ProductReviewPaging%%

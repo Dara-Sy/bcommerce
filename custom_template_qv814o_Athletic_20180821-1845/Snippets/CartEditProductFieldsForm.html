@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" media="screen" href="%%GLOBAL_CdnAppPath%%/javascript/jquery/themes/cupertino/ui.all.css?%%GLOBAL_JSCacheToken%%" />
+
+<h3 id="ModalTitle">%%GLOBAL_CustomizeProductTitle%%</h3>
+
+<form id="CartEditProductFieldsForm" method="post" action="cart.php" onsubmit="return Cart.saveItemCustomizations();" enctype="multipart/form-data">
+	<input type="hidden" name="action" value="EditProductFieldsInCart" />
+	<input type="hidden" name="item_id" value="%%GLOBAL_ItemId%%" />
+
+	<div id="ModalContent" style="overflow: auto;">
+		<dl class="HorizontalFormContainer ProductFields">
+
+		</dl>
+
+		<div class="productAttributeList">
+			%%SNIPPET_ProductFieldsList%%
+
+			%%GLOBAL_ProductAttributeList%%
+		</div>
+	</div>
+
+	<div id="ModalButtonRow">
+		<a href="#" onclick="return $.modal.close();" class="small secondary button">%%LNG_Cancel%%</a>
+		<input class="small button" type="submit" value="%%LNG_Save%%" />
+	</div>
+</form>

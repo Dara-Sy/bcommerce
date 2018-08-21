@@ -1,0 +1,37 @@
+<ul class="ProductList List">
+    {{#variants}}
+        <li class="ListView" data-product="{{ product.id }}">
+            <div class="ProductImage"><a href="{{ product.url }}"><img src="{{ product.default_image.thumbnail_url }}" alt="{{ product.name }}" /></a></div>
+	
+			<div class="ProductDetails">
+				<span class="ProductName p-name"><a href="{{ product.url }}">{{ product.name }}</a></span>
+				<span class="ProductPrice p-price">{{{ formatProductCatalogPrice . }}}</span>
+				{{#if product.add_text }}
+					<span class="ProductActionAdd">
+						<a href="{{ product.add_url }}" class="small button">{{ product.add_text }}</a>
+					</span>
+				{{/if}}
+				{{#if product.rating}}
+					<span class="ProductRating ProductRating{{ product.rating }}">
+						<a class="show-reviews rating-{{ product.rating }}" href="{{ product.url }}#reviews">
+							<span class="has-tip tip-right" title="Read Reviews">
+								<i class="icon-rating-{{ product.rating }}"></i>
+							</span>
+						</a>
+					</span>
+				{{/if}}
+				<div class="ProductDescription">{{{  product.description }}</div>
+				{{#ifStoreConfig 'EnableProductComparisons'}}
+					<div class="ProductCompareButton">
+						<label for="compare_{{ product.id }}">
+							<input type="checkbox" name="compare_product_ids" id="compare_{{ product.id }}" value="{{ product.id }}" onclick="product_comparison_box_changed(this.checked)">
+							{{ getLang 'compare' }}
+						</label>
+					</div>
+				{{/ifStoreConfig}}
+			</div>
+			
+			<a href="{{ product.url }}" class="overlay-link"></a>
+        </li>
+    {{/variants}}
+</ul>

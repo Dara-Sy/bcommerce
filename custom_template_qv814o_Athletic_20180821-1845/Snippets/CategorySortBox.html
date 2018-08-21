@@ -1,0 +1,22 @@
+<div class="SortBox four columns mobile-four push-eight">
+	<div class="row collapse">
+		<div class="four mobile-one columns">
+			<span class="prefix">%%LNG_SortBy%%:</span>
+		</div>
+		<div class="eight mobile-three columns">
+			<form action="%%GLOBAL_URL%%" method="get">
+				%%GLOBAL_HiddenSortField%%
+				<select class="large" name="sort" id="sort" onchange="this.form.submit()">
+					<option %%GLOBAL_SortFeaturedSelected%% value="featured">%%LNG_FeaturedItems%%</option>
+					<option %%GLOBAL_SortNewestSelected%% value="newest">%%LNG_NewestItems%%</option>
+					<option %%GLOBAL_SortBestSellingSelected%% value="bestselling">%%LNG_Bestselling%%</option>
+					<option %%GLOBAL_SortAlphaAsc%% value="alphaasc">%%LNG_AlphaAsc%%</option>
+					<option %%GLOBAL_SortAlphaDesc%% value="alphadesc">%%LNG_AlphaDesc%%</option>
+					<option %%GLOBAL_SortAvgReview%% value="avgcustomerreview">%%LNG_AvgCustomerReview%%</option>
+					<option %%GLOBAL_SortPriceAsc%% value="priceasc">%%LNG_PriceAsc%%</option>
+					<option %%GLOBAL_SortPriceDesc%% value="pricedesc">%%LNG_PriceDesc%%</option>
+				</select>
+			</form>
+		</div>
+	</div>
+</div>

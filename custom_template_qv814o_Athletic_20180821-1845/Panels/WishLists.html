@@ -1,0 +1,37 @@
+<div id="WishLists" style="%%GLOBAL_HideWishLists%%">
+	<h2>%%LNG_WishLists%%</h2>
+	
+	<p style="display: %%GLOBAL_HideNormalMessage%%">
+		%%GLOBAL_WishListMessage%%
+	</p>
+	
+	<div class="alert-box %%GLOBAL_HideErrorMessage%%" style="display: %%GLOBAL_HideErrorMessage%%">
+		<div>%%GLOBAL_WishListMessage%%</div>
+		<a href="" class="close">&times;</a>
+	</div>
+	
+	<div class="alert-box %%GLOBAL_HideSuccessMessage%%" style="display: %%GLOBAL_HideSuccessMessage%%">
+		<div>%%GLOBAL_WishListMessage%%</div>
+		<a href="" class="close">&times;</a>
+	</div>
+
+	<form name="wishlistsform" id="wishlistsform" action="%%GLOBAL_ShopPath%%/wishlist.php?action=deletewishlist" onsubmit="return ValidateDeleteWishlist(true);" method="post">
+		<p>	
+			<input type="button" class="small button" onclick="document.location.href='wishlist.php?action=addwishlist'" value="%%LNG_CreateANewWishList%%">
+			<input type="submit" class="small secondary button" style="%%GLOBAL_HideWishListsTable%%" value="%%LNG_WishListDelete%%">
+		</p>
+
+		<table class="CartContents twelve" style="%%GLOBAL_HideWishListsTable%%">
+			<thead>
+				<tr>
+					<th class="small"><input type="checkbox" id="selectAllWishLists" onclick="ToggleWishListDeleteBoxes(this.checked)"></th>
+					<th class="large">%%LNG_WishListName%%</th>
+					<th class="small">%%LNG_Items%%</th>
+					<th class="small">%%LNG_Shared%%</th>
+					<th>%%LNG_Action%%</th>
+				</tr>
+			</thead>
+			%%SNIPPET_WishList%%
+		</table>
+	</form>
+</div>

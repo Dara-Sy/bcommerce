@@ -1,0 +1,17 @@
+<div class="panel" id="SideGiftCertificateCodeBox">
+	<h4 class="subheader">%%LNG_GiftCertificateCode%%</h4>
+	<form onsubmit="return Cart.CheckGiftCertificateCode()" action="%%GLOBAL_ShopPath%%/cart.php" method="post">
+		<input type="hidden" name="action" value="applygiftcertificate">
+		<div class="GiftCertificateCode">
+			<p>%%LNG_GiftCertificateCodeIntro%%</p>
+			<div class="row collapse">
+				<div class="ten mobile-three columns">
+					<input type="text" name="giftcertificatecode" id="giftcertificatecode" class="Textbox Field100">
+				</div>
+				<div class="two mobile-one columns">
+					<input class="button expand postfix" type="submit" value="Go">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

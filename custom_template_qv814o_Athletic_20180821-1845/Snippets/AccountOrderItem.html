@@ -1,0 +1,18 @@
+<li class="panel">
+	<h4 class="subheader left">%%LNG_Order%% #%%GLOBAL_OrderId%%</h4>
+	<form action="%%GLOBAL_ShopPath%%/account.php" method="get" class="right">
+		<input type="hidden" name="action" value="view_order">
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%">
+		
+		<input type="submit" class="small button bump-right" value="%%LNG_ViewOrder%%" style="display:%%GLOBAL_DisableViewButton%%">
+		<a class="ReturnLink small secondary button" href="account.php?action=new_return&amp;order_id=%%GLOBAL_OrderId%%" style="display: %%GLOBAL_DisableReturnButton%%;">%%LNG_ReturnOrderItems%%</a>
+	</form>
+	
+	<p class="clear">
+		<span class="secondary label">%%LNG_OrderDate%%:</span> %%GLOBAL_OrderDate%%
+	</p>
+	<strong>%%LNG_YourOrderContainsTheFollowingItems2%%</strong>
+	<ul class="OrderItemList square">
+		%%GLOBAL_AccountOrderItemList%%
+	</ul>
+</li>

@@ -1,0 +1,8 @@
+<span class="r-cart-count" style="display:none;">%%GLOBAL_SideCartItemCount%%</span>
+<script>
+	(function(window, document, $, undefined){
+		// only want the number
+		var cartcount = parseInt($('.r-cart-count strong').html());
+		$('.cart-count').html( '(' + cartcount + ')' );
+	})(window, document, jQuery);
+</script>

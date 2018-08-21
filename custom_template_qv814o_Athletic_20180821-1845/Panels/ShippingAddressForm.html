@@ -1,0 +1,12 @@
+<p style="display: %%GLOBAL_HideAddShippingAddressIntroMessage%%">%%GLOBAL_ShippingAddressFormIntro%%</p>
+<p style="display: %%GLOBAL_HideAddShippingAddressMessage%%">%%GLOBAL_Message%%</p>
+
+<form id="AddressEditForm" method="post" action="%%GLOBAL_ShopPathSSL%%/account.php?action=%%GLOBAL_ShippingAddressFormAction%%" onsubmit="return check_shipping_address_form()" class="PL20">
+	<input type="hidden" name="shipid" value="%%GLOBAL_ShipId%%">
+	<dl>
+		%%GLOBAL_ShipCustomFields%%
+	</dl>
+	<p><input class="right button" type="submit" value="%%LNG_SaveAddress%%"></p>
+</form>
+
+%%Panel.AddShippingAddressJavaScript%%

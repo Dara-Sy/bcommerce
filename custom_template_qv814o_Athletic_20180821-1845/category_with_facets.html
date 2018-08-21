@@ -1,0 +1,35 @@
+%%Panel.HTMLHead%%
+<body class="category facets page sidebar">
+%%Panel.Header%%
+	
+<section class="main">
+	<div class="row">
+		<div class="twelve columns">
+			%%Panel.CategoryBreadcrumb%%
+			%%Panel.CategoryHeading%%
+		</div>
+	</div>
+
+	%%Panel.MainGridTopFacets%%
+		
+		<div class="row">%%SNIPPET_CategorySortBox%%</div>
+		<div class="row"><div class="six columns mobile-four push-six">%%Panel.CategoryPagingTop%%</div></div>
+		
+		%%Panel.CategoryContent%%
+		%%Panel.CategoryPagingBottom%%
+		
+		%%Banner.BottomBanner%%
+		
+	%%Panel.MainGridBottomFacets%%
+</section>
+
+%%Panel.Footer%%
+
+<!-- category page scripts -->
+<script>
+	lang.CompareSelectMessage = '%%LNG_CompareSelectMessage%%';
+	lang.PleaseSelectAProduct = '%%LNG_PleaseSelectAProduct%%';
+	config.CompareLink = '%%GLOBAL_CompareLink%%';
+</script>
+
+%%Panel.HTMLFoot%%

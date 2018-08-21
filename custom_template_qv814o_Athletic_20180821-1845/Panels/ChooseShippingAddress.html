@@ -1,0 +1,48 @@
+<div class="Block Moveable Panel" id="ChooseShippingAddress">
+	<h2>%%GLOBAL_CheckoutShippingTitle%%</h2>
+	
+	%%Discount.FreeShippingEligibility%%
+	
+	<!--<ul class="TabNav" style="%%GLOBAL_HideShippingTabs%%">
+		<li id="AddressSingle" class="%%GLOBAL_ActiveTabSingle%%"><a href="%%GLOBAL_ShopPathSSL%%/checkout.php?action=choose_shipping_address&amp;type=single">%%LNG_ShipAllItemsToOneAddress%%</a></li>
+		<li id="AddressMultiple" class="%%GLOBAL_ActiveTabMultiple%%"><a href="%%GLOBAL_ShopPathSSL%%/checkout.php?action=choose_shipping_address&amp;type=multiple">%%LNG_ShipAllItemsToDifferentAddresses%%</a></li>
+	</ul>-->
+	<dl class="tabs" style="%%GLOBAL_HideShippingTabs%%">
+		<dd class="%%GLOBAL_ActiveTabSingle%%"><a href="#AddressSingle">%%LNG_ShipAllItemsToOneAddress%%</a></dd>
+		<dd class="%%GLOBAL_ActiveTabMultiple%%"><a href="#AddressMultiple">%%LNG_ShipAllItemsToDifferentAddresses%%</a></dd>
+	</dl>
+
+	<ul class="tabs-content">
+		<li class="%%GLOBAL_ActiveTabSingle%%" id="AddressSingleTab"> <!-- style="%%GLOBAL_HideTabSingle%%" -->
+			<p>%%GLOBAL_CheckoutShippingIntro%%</p>
+			<ul class="ShippingAddressList collapsed">
+				%%SNIPPET_ShippingAddressList%%
+			</ul>
+		</li>
+		<li class="%%GLOBAL_ActiveTabMultiple%%" id="AddressMultipleTab"> <!-- style="%%GLOBAL_HideTabMultiple%%" -->
+			<p class="InfoMessage">
+			    %%GLOBAL_CheckoutMultiShippingIntro%%
+    		</p>
+			<form method="post" action="%%GLOBAL_ShopPathSSL%%/checkout.php?action=save_multiple_shipping_addresses" id="multiAddressForm">
+				<table class="General Stylize" cellspacing="0" cellpadding="0" border="0">
+					<thead>
+						<tr>
+							<th>%%LNG_Item%%</th>
+							<th>%%LNG_ShippingAddress%%</th>
+						</tr>
+					</thead>
+					<tbody>
+						%%SNIPPET_MultiShippingItem%%
+					</tbody>
+				</table>
+
+				<p>
+					<input class="right button" type="submit" value="%%LNG_ShipToTheseAddresses%%" />
+				</p>
+			</form>
+		</li>
+	</ul>
+</div>
+
+<script>$('.Active').addClass('active');</script>
+%%Panel.ChooseShippingAddressJavaScript%%

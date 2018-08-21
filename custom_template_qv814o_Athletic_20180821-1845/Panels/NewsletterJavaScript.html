@@ -1,0 +1,26 @@
+<script>
+	$('.subscribe_form').unbind('submit').submit(function() {
+		if($(this).find('.nl_first_name').val() == '') {
+			alert('%%LNG_NewsletterEnterFirstName%%');
+			$('#nl_first_name').focus();
+			return false;
+		}
+
+		if($(this).find('.nl_email').val() == '') {
+			alert('%%LNG_NewsletterEnterEmail%%');
+			$('#nl_email').focus();
+			return false;
+		}
+
+		if($(this).find('.nl_email').val().indexOf('@') == -1 || $(this).find('.nl_email').val().indexOf('.') == -1) {
+			alert('%%LNG_NewsletterEnterValidEmail%%');
+			$(this).find('.nl_email').focus();
+			$(this).find('.nl_email').select();
+			return false;
+		}
+
+		// Set the action of the form to stop spammers
+		$('.subscribe_form').append('<input type="hidden" name="check" value="1">');
+		return true;
+	});
+</script>

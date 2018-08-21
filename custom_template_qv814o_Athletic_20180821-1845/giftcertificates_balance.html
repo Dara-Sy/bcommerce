@@ -1,0 +1,40 @@
+%%Panel.HTMLHead%%
+<body class="account page">
+%%Panel.Header%%
+
+<section class="main">
+	%%Panel.MainGridTopWide%%
+	<div class="row">
+		<div class="twelve columns">
+			<h1 style="display: %%GLOBAL_HideTitle%%">%%GLOBAL_BalanceTitle%%</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="four columns">
+			%%Panel.GiftCertificatesMenu%%
+		</div>
+		<div class="eight columns">
+			%%Panel.GiftCertificateBalanceRemaining%%
+			%%Panel.CheckGiftCertificateBalance%%
+		</div>
+	</div>
+	%%Panel.MainGridBottomWide%%
+</section>
+
+%%Panel.Footer%%
+
+<!-- gift certificate balance page scripts -->
+<script>
+	function CheckGiftCertificateBalanceForm() {
+		if($('#giftcertificatecode').val() == "") {
+			alert('%%LNG_EnterValidCertificateCode%%');
+			$('#giftcertificatecode').focus();
+			$('#giftcertificatecode').select();
+			return false;
+		}
+	
+		return true;
+	}
+</script>
+
+%%Panel.HTMLFoot%%

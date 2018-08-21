@@ -1,0 +1,82 @@
+<form id="AdvancedSearchForm" action="%%GLOBAL_ShopPath%%/search.php" method="get" onsubmit="return CheckAdvancedSearchForm()">
+	<input type="hidden" name="mode" value="1">
+
+	<h3>%%LNG_AdvancedSearch%%</h3>
+
+	<div class="row">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_SearchKeyword%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<input type="search" class="Field250" name="search_query_adv" id="search_query_adv" value="%%GLOBAL_FormattedSearchQuery%%">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_BrandName%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<select class="Field250 large" name="brand" id="brand">
+				<option value="">%%LNG_NoPreference%%</option>
+				%%GLOBAL_BrandNameOptions%%
+			</select>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_Categories%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<div id="category" class="categoryPicker Field250"></div>
+			
+			<label for="searchsubs"><input type="checkbox" class="CheckBox" name="searchsubs" id="searchsubs" value="ON" checked="checked"> %%LNG_AutoSearchSubCats%%</label>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top:6px;display: %%GLOBAL_HideProductSearchOptions%%">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_PriceRange%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<div class="row">
+				<div class="six columns"><input type="text" placeholder="From" class="Textbox" name="price_from" id="price_from" size="4" value="%%GLOBAL_PriceFrom%%"></div>
+				<div class="six columns"><input type="text" placeholder="To" class="Textbox" size="4" name="price_to" id="price_to" value="%%GLOBAL_PriceTo%%"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="display: %%GLOBAL_HideProductSearchOptions%%">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_FeaturedProduct%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<select class="large Field250" name="featured" id="featured">
+				<option value="">%%LNG_NoPreference%%</option>
+				<option value="1">%%LNG_OnlyFeaturedProducts%%</option>
+				<option value="2">%%LNG_OnlyNonFeaturedProducts%%</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="three mobile-two columns">
+			<label class="right inline">%%LNG_FreeShipping%%</label>
+		</div>
+		<div class="nine mobile-two columns">
+			<select class="large Field250" name="shipping" id="shipping">
+				<option value="">%%LNG_NoPreference%%</option>
+				<option value="1">%%LNG_OnlyFreeShipping%%</option>
+				<option value="2">%%LNG_OnlyPaidShipping%%</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="twelve columns">
+			<input type="submit" class="right button" value="%%LNG_Search%%">
+		</div>
+	</div>
+
+</form>

@@ -1,0 +1,15 @@
+<form name="frmWishList" id="frmWishList" action="%%GLOBAL_ShopPath%%/wishlist.php" method="get">
+	<div class="row DetailRow NoLabelRow" style="display:%%GLOBAL_HidePurchasingOptions%%">
+		<div class="Label column"></div>
+		<div class="Value column">
+			<input type="hidden" name="action" value="add">
+			<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%">
+			<input type="hidden" name="variation_id" value="" class="WishListVariationId">
+			<button type="submit" class="white button wishlist-button">
+				Add to Wishlist
+			</button>
+
+			<div class="radio-inline">%%GLOBAL_WishLists%%</div>
+		</div>
+	</div>
+</form>

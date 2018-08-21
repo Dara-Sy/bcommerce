@@ -1,0 +1,62 @@
+<h2>%%LNG_OrderIdHash%%%%GLOBAL_OrderId%%</h2>
+
+<p>%%LNG_YourOrderDetailsBelow%%</p>	
+
+<p>
+	<span style="display: %%GLOBAL_HideOrderStatus%%"><span class="secondary label radius">%%LNG_OrderStatus%%:</span> %%GLOBAL_OrderStatus%%<br></span>
+	<span class="secondary label radius">%%LNG_OrderDate%%:</span> %%GLOBAL_OrderDate%%<br>
+	<span class="label radius">%%LNG_OrderTotal%%:</span> <strong>%%GLOBAL_OrderTotal%%</strong><br>
+</p>
+
+<div class="row">
+	<div class="six columns">
+		<div class="BillingDetails panel">
+			<h4 class="subheader">%%LNG_BillingDetails%%</h4>
+			<p>%%GLOBAL_BillingAddress%%</p>
+		</div>
+	</div>
+	<div class="six columns">
+		<div class="ShippingDetails panel" style="%%GLOBAL_HideSingleShippingAddress%%">
+			<h4 class="subheader">%%LNG_ShippingDetails%%</h4>
+			<p>%%GLOBAL_ShippingAddress%%</p>
+		</div>
+	</div>		
+</div>
+
+<div class="alert-box">
+	<div>%%GLOBAL_FlassMessage%%</div>
+	<a href="" class="close">&times;</a>
+</div>
+
+<form action="cart.php?action=addreorderitems" method="post" onsubmit="return ValidateReorderForm(this);" id="ReorderForm">
+
+	<h6>Order #%%GLOBAL_OrderId%% %%LNG_ContainsTheFollowingItems%%:</h6>
+
+	<table class="twelve">
+		<thead style="%%GLOBAL_HideItemDetailsHeader%%">
+			<tr>
+				<th>%%LNG_ItemDetails%%</th>
+				<th>%%LNG_Price%%</th>
+			</tr>
+		</thead>
+		<tfoot>
+			%%GLOBAL_OrderTotalRows%%
+		</tfoot>
+		<tbody>
+			%%SNIPPET_AccountOrderItemRow%%
+		</tbody>
+	</table>
+
+	<input type="hidden" name="orderid" value="%%GLOBAL_OrderId%%">
+	<input type="submit" class="right button" value="%%LNG_Reorder%%">
+</form>
+
+<div style="%%GLOBAL_HideOrderComments%%">
+	<h3>%%LNG_OrderComments%%</h3>
+	<div class="PL20">
+		<p>%%GLOBAL_OrderComments%%</p>
+	</div>
+</div>
+
+%%Panel.AccountOrderShipments%%
+%%Panel.AccountOrderJavaScript%%

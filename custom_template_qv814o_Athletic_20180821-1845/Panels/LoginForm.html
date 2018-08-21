@@ -1,0 +1,61 @@
+<div class="row">
+	<div class="six columns">
+		
+		<h2>%%GLOBAL_NewAccountHeading%%</h2>
+		
+		<div style="display:%%GLOBAL_HideNewCustomerButton%%">
+			<p>%%LNG_NewCustomerIntro1%% %%GLOBAL_StoreName%% %%LNG_NewCustomerIntro2%%</p>
+			<form action="%%GLOBAL_ShopPath%%/login.php" method="get">
+				<input type="hidden" name="action" value="create_account" />
+				<input type="hidden" name="checking_out" value="yes" />
+				<input type="submit" value="%%LNG_ContinueRaquo%%" style="padding:2px 10px 2px 10px" />
+			</form>
+		</div>
+		<div style="display: %%GLOBAL_HideLoginNewAccountIntro%%">
+			<div class="square">
+				%%LNG_CreateAccountLoginIntro%%
+			</div>		
+			<a class="button" href="%%GLOBAL_ShopPath%%/login.php?action=create_account">%%LNG_ClickToCreateAnAccount%%</a>
+		</div>
+		
+	</div>
+	<div class="six columns">
+		
+		<h2>%%GLOBAL_ExistingUserHeading%%</h2>
+		
+		<div class="alert-box secondary %%GLOBAL_MessageClass%% %%GLOBAL_HideLoginMessage%%" style="display: %%GLOBAL_HideLoginMessage%%">
+			<div>%%GLOBAL_LoginMessage%%</div>
+			<a href="" class="close">&times;</a>
+		</div>
+		
+		<form action="%%GLOBAL_ShopPath%%/login.php?action=check_login" method="post" onsubmit="return check_login_form()">
+			<div class="row">
+				<div class="four mobile-two columns">
+					<label class="right inline">%%LNG_EmailAddress%%</label>
+				</div>
+				<div class="eight mobile-two columns">
+					<input type="text" class="Textbox Field150 InitialFocus" name="login_email" id="login_email">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="four mobile-two columns">
+					<label class="right inline">%%LNG_Password%%</label>
+				</div>
+				<div class="eight mobile-two columns">
+					<input type="password" autocomplete="off" class="Textbox Field150" name="login_pass" id="login_pass">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="four mobile-two columns"></div>
+				<div class="eight mobile-two columns">
+					<p><input class="button" id="LoginButton" type="submit" value="%%LNG_LoginWord%%"> &nbsp; <a href="%%GLOBAL_ShopPath%%/login.php?action=reset_password">%%LNG_ForgotYourPassword%%</a></p>
+				</div>
+			</div>
+		</form>
+		
+	</div>	
+</div>
+
+%%Panel.LoginJavaScript%%

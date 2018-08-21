@@ -1,0 +1,21 @@
+<li itemprop="review" itemscope itemtype="http://schema.org/Review">
+	<h5>
+		<span itemprop="headline">%%GLOBAL_ReviewTitle%%</span>
+		<span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+			<meta itemprop="ratingValue" content="%%GLOBAL_ReviewRating%%">
+			<span class="rating-stars"><i class="icon-rating-%%GLOBAL_ReviewRating%%"></i></span>
+		</span>
+	</h5>
+	<blockquote>
+	  <p>
+	  	<span itemprop="reviewBody">%%GLOBAL_ReviewText%%</span>
+	  	<cite>
+	  		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+	  			<strong itemprop="name">%%GLOBAL_ReviewName%%</strong>
+	  		</span>
+	  		%%LNG_xOn%%
+	  		<span itemprop="dateCreated">%%GLOBAL_ReviewDate%%</span>
+	  	</cite>
+	  </p>
+	</blockquote>	
+</li>

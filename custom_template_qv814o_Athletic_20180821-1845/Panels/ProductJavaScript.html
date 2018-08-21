@@ -1,0 +1,85 @@
+<script>
+	// these lines are from various panels on the product page, now included in one place
+	var productId = %%GLOBAL_ProductId%%;
+	config.FastCart = %%GLOBAL_FastCart%%;
+	
+	lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+	lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+	lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+	lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+	lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+	var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+	%%GLOBAL_ProductMinMaxQtyJavascript%%
+	
+	lang.ReviewNoRating = "%%LNG_ReviewNoRating%%";
+	lang.ReviewNoTitle = "%%LNG_ReviewNoTitle%%";
+	lang.ReviewNoText = "%%LNG_ReviewNoText%%";
+	lang.ReviewNoCaptcha = "%%LNG_NoCaptcha%%";
+	var RecaptchaOptions = {
+		theme : 'clean'
+	};
+	
+	lang.Close = '%%LNG_Close%%';
+	config.ProductImageMode = '%%GLOBAL_ProductImageMode%%';
+	
+	selectCurrentVideo('%%GLOBAL_FeaturedVideo%%');
+
+	function show_product_review_form() {
+		$('#ReviewsTabLink').trigger('click');
+		$('.ProductReviewForm').show(300);
+		document.location.href = "#write_review";
+	
+		$("html,body").animate({scrollTop: $(".ProductReviewForm").offset().top - 15}, 500);
+	
+		//$('.captchaPlaceholder').captchaPlaceholder();
+	}
+	
+	function jump_to_product_reviews() {
+		$('#ReviewsTabLink').trigger('click');
+		$('.ProductReviewForm').hide(300);
+		document.location.href = "#reviews";
+		
+		$("html,body").animate({scrollTop: $("#ReviewsTab").offset().top - 5}, 500);
+	}
+
+	// RATING STAR PICKER
+	$('#revrating').hide();
+	$('#revrating').after('<div id="rating-stars" class="eight"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>');
+	$('#rating-stars i').hover(function(){
+		$(this).parent().attr('class','eight rating-'+($(this).index()+1));
+	},function(){
+		$(this).parent().attr('class','eight rating-'+$('#revrating option:selected').index());
+	});
+	$('#rating-stars i').click(function(){
+		$('#revrating option').eq($(this).index()+1).attr('selected',true);
+		$(this).queue( function(next){$(this).css('color','#222'); next(); }).delay(250).queue( function(next){$(this).css('color',''); next(); });
+	});
+	
+	// SHOW REVIEWS / REVIEW FORM
+	$('.show-review-form').click(function(){
+		show_product_review_form();
+		return false;
+	});
+	
+	$('#ProductDetails .show-reviews').click(function(){
+		jump_to_product_reviews();
+		return false;	
+	});
+	
+	$(document).ready(function(){
+		if (window.location.href.search('#write_review') > 0)
+			show_product_review_form();
+		else if (window.location.href.search('#reviews') > 0 || window.location.href.search('tab=ProductReviews') > 0)
+			jump_to_product_reviews();
+	});
+	
+	var HideReviewCaptcha = "%%GLOBAL_HideReviewCaptcha%%";
+	// Should we automatically open the review form?
+	if ("%%GLOBAL_AutoShowReviewForm%%" == "1") {
+		show_product_review_form();
+	}
+
+	if ("%%GLOBAL_JumpToReviews%%" == "1") {
+		jump_to_product_reviews();
+	}
+</script>

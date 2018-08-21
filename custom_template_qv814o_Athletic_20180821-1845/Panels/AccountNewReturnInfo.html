@@ -1,0 +1,26 @@
+<div id="AccountNewReturnInfo" style="display: %%GLOBAL_HideReturnForm%%">
+	<h4 class="subheader">%%LNG_WhyReturningItems%%</h4>
+	<dl>
+		<dt><span class="Required">*</span> %%LNG_ReturnReason%%:</dt>
+		<dd>
+			<select name="return_reason" id="return_reason" class="Field350 large">
+				<option value="">%%LNG_ChooseReturnReason%%</option>
+				%%GLOBAL_ReturnReasonsList%%
+			</select>
+		</dd>
+		<dt style="display: %%GLOBAL_HideReturnAction%%">&nbsp;&nbsp; %%LNG_ReturnAction%%:</dt>
+		<dd style="display: %%GLOBAL_HideReturnAction%%">
+			<select name="return_action" id="return_action" class="Field350 large">
+				<option value="">%%LNG_ChooseReturnAction%%</option>
+				%%GLOBAL_ReturnActionsList%%
+			</select>
+		</dd>
+		<dt>&nbsp;&nbsp; %%LNG_ReturnComments%%:</dt>
+		<dd>
+			<textarea name="return_comments" id="return_comments" rows="7" class="Field350"></textarea>
+		</dd>
+		
+		<dt>&nbsp;</dt>
+		<dd><input class="button" type="submit" value="%%LNG_SubmitReturn%%"></dd>
+	</dl>
+</div>

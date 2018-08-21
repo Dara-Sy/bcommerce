@@ -1,0 +1,189 @@
+<div class="row details-row">
+    
+    <div class="six columns product-images">
+        <div class="row">
+            <div class="twelve columns">
+                %%SNIPPET_ProductThumbImage%%
+                
+                <ul class="product-thumbs">
+                    %%SNIPPET_ProductTinyImages%%
+                </ul>
+                
+                <script>
+                    var ProductThumbWidth = %%GLOBAL_ProductThumbWidth%%;
+                    var ProductThumbHeight =  %%GLOBAL_ProductThumbHeight%%;
+                    var ProductMaxZoomWidth = %%GLOBAL_ProductMaxZoomWidth%%;
+                    var ProductMaxZoomHeight =  %%GLOBAL_ProductMaxZoomHeight%%;
+                    var ProductTinyWidth = %%GLOBAL_ProductMaxTinyWidth%%;
+                    var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
+                    
+                    var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
+                    var productId = %%GLOBAL_ProductId%%;
+                </script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns social-media">
+                %%GLOBAL_PinterestButton%%
+                %%GLOBAL_AddThisLink%%
+                %%GLOBAL_FacebookLikeButtonAbove%%
+            </div>
+        </div>
+    </div>
+    
+    <div class="six columns product-details" id="ProductDetails">
+        
+        <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
+        
+        %%Discount.FreeShippingEligibility%%
+        <div class="alert-box">
+            %%GLOBAL_ProductDetailFlashMessages%%
+            <a href="" class="close">&times;</a>
+        </div>
+        
+        <div class="alert-box OutOfStockMessage">
+            %%SNIPPET_SideAddItemSoldOut%%
+            <a href="" class="close">&times;</a>
+        </div>
+
+        <div itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+            <div class="row DetailRow BrandRow" style="display: %%GLOBAL_HideBrandLink%%">
+                <div class="Label column">%%LNG_Brand%%:</div>
+                <div class="Value column">
+                    <a href="%%GLOBAL_BrandLink%%">
+                        <span itemprop="name">%%GLOBAL_BrandName%%</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            <div class="row DetailRow RatingRow NoLabelRow" style="display: %%GLOBAL_HideRating%%">
+                <div class="Label column">%%LNG_Rating%%:</div>
+                <div class="Value column">
+                    <a href="#" class="show-reviews" title="Read Reviews">
+                        <meta itemprop="ratingValue" content="%%GLOBAL_Rating%%">
+                        <i class="icon-rating-%%GLOBAL_Rating%%"></i>
+                        
+                        (<span itemprop="ratingCount">%%GLOBAL_ProductNumReviews%%</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row DetailRow RetailPrice NoLabelRow" style="display: %%GLOBAL_HideRRP%%">
+            <div class="Label column">%%LNG_RRP%%:</div>
+            <div class="Value column">
+                %%GLOBAL_RetailPrice%%
+            </div>
+        </div>
+
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            
+            <div class="row DetailRow PriceRow NoLabelRow" style="%%GLOBAL_HidePrice%%">
+                <div class="Label PriceLabel column">%%GLOBAL_PriceLabel%%:</div>
+                <div class="Value column">
+                    <span itemprop="price" class="ProductPrice VariationProductPrice">
+                        %%GLOBAL_ProductPrice%%
+                    </span>
+                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row DetailRow ProductSKU" style="display: %%GLOBAL_HideSKU%%">
+            <div class="Label column">%%LNG_SKU%%:</div>
+            <div class="Value column">
+                <span itemprop="sku" class="VariationProductSKU">
+                    %%GLOBAL_SKU%%
+                </span>
+            </div>
+        </div>
+        
+        <div class="row DetailRow" style="%%GLOBAL_HideVendorDetails%%">
+            <div class="Label column">%%LNG_Vendor%%:</div>
+            <div class="Value column">
+                %%GLOBAL_VendorName%%
+            </div>
+        </div>
+        
+        <div class="row DetailRow" style="display: %%GLOBAL_HideCondition%%">
+            <div class="Label column">%%LNG_Condition%%:</div>
+            <div class="Value column">
+                %%GLOBAL_ProductCondition%% 
+            </div>
+        </div>        
+        
+        <div itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue">
+            <div class="row DetailRow" style="display: %%GLOBAL_HideWeight%%">
+                <div class="Label column">%%LNG_Weight%%:</div>
+                <div class="Value column">
+                    <span itemprop="value" class="VariationProductWeight">
+                        %%GLOBAL_ProductWeight%%
+                    </span>
+                </div>
+            </div>
+        </div>    
+
+        <div class="row DetailRow" style="display: %%GLOBAL_HideAvailability%%">
+            <div class="Label column">%%LNG_Availability%%:</div>
+            <div class="Value column">
+                %%GLOBAL_Availability%%
+            </div>
+        </div>    
+
+        <div class="row DetailRow" style="display: %%GLOBAL_HideShipping%%">
+            <div class="Label column">%%LNG_Shipping%%:</div>
+            <div class="Value column">
+                %%GLOBAL_ShippingPrice%%
+            </div>
+        </div>    
+
+        <div class="row DetailRow" style="%%GLOBAL_HideMinQty%%">
+            <div class="Label column">%%LNG_ProductMinQty%%:</div>
+            <div class="Value column">
+                %%GLOBAL_MinQty%% %%LNG_units%%
+            </div>
+        </div>    
+
+        <div class="row DetailRow" style="%%GLOBAL_HideMaxQty%%">
+            <div class="Label column">%%LNG_ProductMaxQty%%:</div>
+            <div class="Value column">
+                %%GLOBAL_MaxQty%% %%LNG_units%%
+            </div>
+        </div>    
+
+        <div class="row DetailRow InventoryLevel" style="%%GLOBAL_HideCurrentStock%%">
+            <div class="Label column">%%GLOBAL_CurrentStockLabel%%:</div>
+            <div class="Value column">
+                <span class="VariationProductInventory">
+                    %%GLOBAL_InventoryList%%
+                </span>
+            </div>
+        </div>    
+
+        <div class="row DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%">
+            <div class="Label column">%%LNG_GiftWrapping%%:</div>
+            <div class="Value column">
+                %%GLOBAL_GiftWrappingAvailable%%
+            </div>
+        </div>
+    
+        <div class="row AddToCartRow">
+            %%SNIPPET_ProductAddToCart%%
+            %%SNIPPET_ProductExpectedReleaseDate%%
+            
+            <div style="display:%%GLOBAL_HideWishlist%%">
+                %%Panel.SideProductAddToWishList%%
+            </div>
+        </div>
+    <script>
+$(document).ready(function(){
+$(".DetailRow:contains('Used') .Value").html("Cleaned &amp; Serviced");
+$(".DetailRow:contains('Refurbished') .Value").html("Remanufactured");
+});
+</script>
+    </div><!-- #ProductDetails -->
+    
+</div><!-- .row -->

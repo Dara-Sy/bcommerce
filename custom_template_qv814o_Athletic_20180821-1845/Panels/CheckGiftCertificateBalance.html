@@ -1,0 +1,29 @@
+<div class="alert-box %%GLOBAL_HideGiftCertificateError%%" style="display:%%GLOBAL_HideGiftCertificateError%%">
+	%%GLOBAL_ErrorMessage%%
+	<a href="" class="close">&times;</a>
+</div>
+
+<p style="display: %%GLOBAL_HideIntro%%">
+	%%LNG_GiftCertificateBalanceIntro%%
+</p>
+
+<img src="%%GLOBAL_TPL_PATH%%/ExampleGiftCertificate.gif" alt="" style="margin-bottom: 15px; display: %%GLOBAL_HideExampleImage%%">
+
+<form method="post" action="%%GLOBAL_ShopPath%%/giftcertificates.php?action=balance" onsubmit="return CheckGiftCertificateBalanceForm()" id="frmGiftCertificate">
+	<div class="row">
+		<div class="four mobile-two columns">
+			<label class="right inline"><span class="Required">*</span> %%LNG_GiftCertificateBalanceCode%%</label>
+		</div>
+		<div class="eight mobile-two columns">
+			<div class="row collapse">
+				<div class="eight mobile-three columns">
+					<input type="text" class="Textbox" name="giftcertificatecode" id="giftcertificatecode" value="">
+				</div>
+				<div class="four mobile-one columns">
+					<button class="button expand postfix checkgiftcertificate-button" type="submit"><i class="icon-arrow-right"></i><span>%%LNG_CheckBalance%%</span></button>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+</form>

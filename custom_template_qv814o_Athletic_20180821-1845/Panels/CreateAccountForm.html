@@ -1,0 +1,55 @@
+<h1>%%GLOBAL_CreateAccountHeading%%</h1>
+
+<form action="%%GLOBAL_ShopPath%%/login.php?action=save_new_account" method="post" onsubmit="return check_create_account_form()" class="PL20">
+
+	<div class="row">
+		<div class="twelve columns">
+			<p style="display: %%GLOBAL_HideCreateAccountIntroMessage%%">
+				%%LNG_CreateAccountIntro4%% <em>%%GLOBAL_StoreName%%</em> %%LNG_CreateAccountIntro5%%
+			</p>
+			
+			<div class="alert-box %%GLOBAL_HideCreateAccountErrorMessage%%" style="display:%%GLOBAL_HideCreateAccountErrorMessage%%">
+				<div>%%GLOBAL_ErrorMessage%%</div>
+				<a href="" class="close">&times;</a>
+			</div>
+			
+			<div class="row">
+				<div class="six columns">
+					<fieldset>
+						<legend>%%LNG_ShippingDetails%%</legend>
+						<p>%%LNG_CreateAccountShippingIntro%%</p>
+						<dl>%%GLOBAL_CreateAccountDetails%%</dl>
+					</fieldset>
+				</div>
+				<div class="six columns">
+					<fieldset>
+						<legend>%%LNG_PersonalDetails%%</legend>
+						<p>%%LNG_CreateAccountPersonalIntro%%</p>
+						<dl>%%GLOBAL_CreateAccountEmailPassword%%</dl>
+					</fieldset>
+					
+					<fieldset style="display: %%GLOBAL_HideReviewCaptcha%%">
+						<legend>Security Question</legend>
+						
+						<div class="last">
+							<script	src="https://www.google.com/recaptcha/api/challenge?k=%%GLOBAL_ReCaptchaAPIKeyPublic%%"></script>
+							<noscript>
+								<iframe src="https://www.google.com/recaptcha/api/noscript?k=%%GLOBAL_ReCaptchaAPIKeyPublic%%"
+										height="300" width="500" frameborder="0"></iframe>
+								<br>
+								<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+								</textarea>
+								<input type="hidden" name="recaptcha_response_field"
+									   value="manual_challenge">
+							</noscript>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			
+			<input class="right button" type="submit" value="%%GLOBAL_CreateAccountButtonText%%">
+			
+		</div>
+	</div>
+
+</form>

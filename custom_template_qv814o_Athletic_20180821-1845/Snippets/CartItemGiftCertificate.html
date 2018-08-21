@@ -1,0 +1,12 @@
+<li data-product="%%GLOBAL_ProductId%%" class="GiftCertificate">
+	<span class="ProductPrice right">%%GLOBAL_ProductTotal%%</span>
+
+	<span class="ProductName GiftCertificateName"><h4><a href="giftcertificates.php?action=purchase&amp;itemid=%%GLOBAL_CartItemId%%">%%GLOBAL_GiftCertificateName%%</a></h4></span>
+	
+	<span class="gift-for">%%LNG_CapitalFor%%: <strong>%%GLOBAL_GiftCertificateTo%%</strong></span>
+	
+	<ul class="button-group radius">
+		<li><a class="small secondary button" href="giftcertificates.php?action=purchase&amp;itemid=%%GLOBAL_CartItemId%%">%%LNG_Edit%%</a></li>
+		<li><a class="small secondary button" href="javascript:void(0)" onclick="Cart.RemoveItem('%%GLOBAL_CartItemId%%')" class="CartRemoveLink">%%LNG_Remove%%</a></li>
+	</ul>
+</li>

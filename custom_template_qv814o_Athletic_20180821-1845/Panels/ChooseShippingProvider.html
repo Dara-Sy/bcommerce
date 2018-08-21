@@ -1,0 +1,26 @@
+<div style="display:%%GLOBAL_HideShippingProviderList%%" id="ChooseShippingProvider">
+	<h1>%%LNG_ChooseShippingProvider%%</h1>
+	%%Discount.FreeShippingEligibility%%
+	<form action="%%GLOBAL_ShopPath%%/checkout.php?action=save_shipper" method="post" onsubmit="return Checkout.ChooseShippingProvider()">
+		<div class="radio-list">
+			%%GLOBAL_ShippingQuotes%%
+		</div>
+
+		<div class="ML20">
+			<input class="button" type="submit" value="%%LNG_Continue%%">
+		</div>
+		%%GLOBAL_DeliveryDisclaimer%%
+	</form>
+</div>
+
+<div style="display:%%GLOBAL_HideNoShippingProviders%%">
+	<h1>%%LNG_Oops%%</h1>
+	<div class="alert-box alert">
+		<div>%%GLOBAL_ShippingError%% <a href="javascript:history.go(-1)">%%LNG_TryAgain%%</a></div>
+		<a href="" class="close">&times;</a>
+	</div>
+	<p>%%LNG_CouldNotShipFollowingItems%%</p>
+	<ul>
+		%%GLOBAL_ItemList%%
+	</ul>
+</div>

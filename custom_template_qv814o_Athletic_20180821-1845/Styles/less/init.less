@@ -1,0 +1,680 @@
+/* sprout commerce mixins */
+
+.primaryForeground {
+  color: white;
+}
+
+.secondaryForeground {
+  color: white;
+}
+
+/* SPROUT COMMERCE - MAIN COLOR AND SECONDARY COLOR */
+
+a {
+	color: @color-primary;
+}
+a:hover, a:focus {
+	color: darken(@color-primary, 5%);
+}
+
+
+.button {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 15%);
+}
+.button:hover, .button:focus {
+	background-color: darken(@color-primary, 10%);
+}
+
+
+.button.primary {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 15%);
+}
+.button.primary:hover, .button.primary:focus {
+	background-color: darken(@color-primary, 10%);
+}
+
+
+.button.secondary {
+	background-color: @color-secondary;
+	border-color: darken(@color-secondary, 15%);
+	.secondaryForeground;
+}
+.button.secondary:hover, .button.secondary:focus {
+	background-color: darken(@color-secondary, 10%);
+}
+
+
+.button.disabled, .button[disabled] {
+	background-color: @color-primary;
+}
+.button.disabled:hover, .button[disabled]:hover {
+	background-color: @color-primary;
+}
+.button.disabled.secondary, .button[disabled].secondary {
+	background-color: @color-secondary;
+}
+.button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+	background-color: @color-secondary;
+}
+
+
+.button.dropdown > ul li:hover, .button.dropdown > ul li:focus {
+	background-color: lighten(@color-primary, 45%);
+}
+.button.dropdown.split:hover, .button.dropdown.split:focus {
+	background-color: @color-primary;
+}
+.button.dropdown.split.secondary:hover, .button.dropdown.split.secondary:focus {
+	background-color: @color-secondary;
+}
+.button.dropdown.split > a:hover, .button.dropdown.split > a:focus {
+	background-color: darken(@color-primary, 10%);
+}
+.button.dropdown.split > span {
+	background-color: @color-primary;
+	border-left-color: darken(@color-primary, 15%);
+}
+.button.dropdown.split > span:hover, .button.dropdown.split > span:focus {
+	background-color: darken(@color-primary, 10%);
+}
+.button.dropdown.split.secondary > span {
+	background-color: @color-secondary;
+	border-left-color: darken(@color-secondary, 15%);
+}
+.button.dropdown.split.secondary > a:hover, .button.dropdown.split.secondary > span:hover, .button.dropdown.split.secondary > a:focus, .button.dropdown.split.secondary > span:focus {
+	background-color: darken(@color-secondary, 10%);
+}
+
+
+.tabs dd a:focus, .tabs li a:focus {
+	color: @color-primary;
+}
+.tabs dd.active, .tabs li.active {
+	border-top-color: @color-primary;
+}
+.tabs.pill dd.active a, .tabs.pill li.active a {
+	background-color: @color-primary;
+}
+
+
+div.alert-box {
+	background-color: @color-primary;
+}
+div.alert-box.secondary {
+	background-color: @color-secondary;
+	.secondaryForeground;
+}
+
+
+.label {
+	background-color: @color-primary;
+}
+.label.secondary {
+	background-color: @color-secondary;
+	.secondaryForeground;
+}
+
+
+.has-tip:hover, .has-tip:focus {
+  border-bottom-color: darken(@color-primary, 20%);
+  color: @color-primary;
+}
+.tooltip.opened {
+	color: @color-primary !important;
+	border-bottom-color: darken(@color-primary, 20%) !important;
+}
+
+
+.panel.callout {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 10%);
+}
+.panel.callout .button {
+	color: @color-primary;
+}
+
+
+ul.accordion {
+	border-bottom-color: @color-secondary;
+}
+ul.accordion > li {
+	border-top-color: @color-secondary;
+}
+ul.accordion > li > div.title {
+	background-color: lighten(@color-secondary, 5%);
+	border-left-color: @color-secondary;
+	border-right-color: @color-secondary;
+}
+
+ul.accordion > li > div.title:after {
+	content:"";
+	border-color: transparent darken(@color-secondary, 30%) transparent transparent;
+}
+ul.accordion > li.active {
+	border-top-color: @color-primary;
+}
+ul.accordion > li.active .title:after {
+	content:"";
+	border-color: darken(@color-secondary, 30%) transparent transparent transparent;
+}
+ul.accordion > li.active .content {
+	border-left-color: @color-secondary;
+	border-right-color: @color-secondary;
+}
+
+
+dl.sub-nav dd.active a {
+	background-color: @color-primary;
+}
+
+
+ul.pagination li.current a {
+	background-color: @color-primary;
+}
+ul.pagination li.current a:hover, ul.pagination li.current a:focus {
+	background-color: @color-primary;
+}
+
+
+.th:hover img, .th:focus img {
+	-webkit-box-shadow: 0 0 6px 1px fade(@color-primary, 50%);
+	-moz-box-shadow: 0 0 6px 1px fade(@color-primary, 50%);
+	box-shadow: 0 0 6px 1px fade(@color-primary, 50%);
+}
+
+
+div.progress .meter {
+	background-color: @color-primary;
+}
+div.progress.secondary .meter {
+	background-color: @color-secondary;
+}
+
+
+.nav-bar > li.active {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 10%);
+}
+.nav-bar > li.active:hover {
+	background: @color-primary;
+}
+.nav-bar.vertical > li.active {
+	border-right-color: darken(@color-primary, 10%);
+}
+
+
+.tabs.mobile dd a.active, .tabs.mobile li a.active {
+	background-color: @color-primary;
+}
+
+
+.productOptionPickListSwatch .selectedValue .textureContainer,
+.productOptionPickListSwatch .selectedValue .swatchColours {
+	border-color: @color-primary;
+}
+.productOptionViewProductPickListWithImage .selectedValue td {
+	background-color: @color-primary;
+}
+html.js .productOptionViewRectangle .selectedValue label {
+	border-color: @color-primary;
+}
+html.js .productOptionViewRectangle .none label,
+html.js .productOptionViewRectangle .selectedValue.none label {
+	color: @color-primary;
+}
+
+
+div.alert-box {
+	background-color: @color-primary;
+}
+
+
+.panel.callout {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 10%);
+}
+
+
+.label {
+	background-color: @color-primary;
+}
+
+
+.callout table .ProductPrice {
+	color: @color-primary;
+}
+
+
+ul.product-thumbs li:hover {
+	border-color: @color-primary;
+}
+
+
+.clearing-assembled .clearing-container ul[data-clearing] li.visible {
+	border-top-color: @color-primary;
+}
+
+
+#rating-stars.rating-1 .icon-star:first-child,
+#rating-stars.rating-2 .icon-star:nth-child(1), #rating-stars.rating-2 .icon-star:nth-child(2),
+#rating-stars.rating-3 .icon-star:nth-child(1), #rating-stars.rating-3 .icon-star:nth-child(2), #rating-stars.rating-3 .icon-star:nth-child(3),
+#rating-stars.rating-4 .icon-star:nth-child(1), #rating-stars.rating-4 .icon-star:nth-child(2), #rating-stars.rating-4 .icon-star:nth-child(3), #rating-stars.rating-4 .icon-star:nth-child(4),
+#rating-stars.rating-5 .icon-star {
+	color: @color-primary;
+}
+
+
+.QuickSearchHover td {
+	background-color: @color-secondary;
+}
+
+
+.pagination .ActivePage {
+	background-color: @color-primary;
+}
+
+
+ul.orbit-bullets li.active {
+	background-color: @color-primary;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.responsive .thumb-nav-wrap > ul li > a:hover {
+		background-color: @color-secondary;
+	}
+	.responsive .thumb-nav-wrap > ul li > a.active {
+		background-color: @color-primary;
+	}
+}
+
+/* DESKTOP SIZE CAROUSEL */
+@media only screen and (min-width: 481px) {
+	ul.product-thumbs > li.active {
+		box-shadow: 0 3px 0 @color-primary;
+	}
+}
+/* DUPLICATED FROM ABOVE MEDIA QUERY FOR RESPONSIVE TOGGLE */
+.responsive-off ul.product-thumbs > li.active {
+	box-shadow: 0 3px 0 @color-primary;
+}
+
+
+h1 {
+	color: @color-primary;
+}
+
+
+.button {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 12%);
+}
+.checkout.page .strong.button {
+	background-color: @color-primary;
+}
+.button:hover {
+	background-color: darken(@color-primary, 12%);
+}
+
+
+/* BLACK / WHITE DEPENDING ON LIGHTNESS OF SECONDARY COLOR */
+.alert-box.secondary,
+.alert-box.secondary p,
+.alert-box.secondary div,
+.alert-box.secondary a {
+	.secondaryForeground;
+}
+
+
+li.GiftCertificate .ProductName.GiftCertificateName a {
+	color: @color-primary;
+}
+
+
+.express.checkout .secondary.button {
+	color: @color-primary;
+}
+.express.checkout .panel .button {
+	color: @color-primary;
+}
+.step-number {
+	background-color: @color-primary;
+}
+
+
+li:hover > .ProductDetails > .ProductName a {
+	color: @color-primary;
+}
+
+
+.subcat-grid li:hover a {
+	color: @color-primary;
+}
+
+
+.inline-list.subcategory-list a:hover {
+	color: @color-primary;
+}
+.inline-list.dividers li {
+	border-right-color: @color-secondary;
+}
+.inline-list.dividers li:first-child {
+	border-right-color: @color-secondary;
+}
+
+
+.button.wishlist-button {
+	color: @color-primary;
+}
+
+
+.orbit .button {
+	background-color: @color-primary;
+}
+
+
+.account .icon-comment {
+	color: @color-primary;
+}
+
+
+.CurrencyList a.Sel {
+	background-color: @color-secondary;
+}
+
+#currency-chooser .currencies {
+	background-color: @color-secondary;
+}
+
+.wrap {
+	border-top-color: @color-secondary;
+}
+
+header.main .info-col .search-form input {
+	border-color: @color-secondary;
+}
+header.main .info-col .search-form button {
+	background-color: @color-secondary;
+	border-top-color: @color-secondary;
+	border-right-color: @color-secondary;
+	border-bottom-color: @color-secondary;
+}
+header.main .main-menu.nav ul ul li {
+	background-color: @color-secondary;
+}
+header.main .main-menu .toggleMenu i {
+	color: @color-secondary;
+}
+header.main .main-menu .toggleMenu.active {
+	background-color: @color-secondary;
+}
+
+
+.orbit .button {
+	background-color: @color-primary;
+}
+
+
+.promo-banner li {
+	border-right-color: @color-secondary;
+	color: @color-secondary;
+}
+
+
+footer.main {
+	background-color: @color-secondary;
+}
+
+
+@media only screen and (min-width: 769px) {
+	.main-menu {
+		background-color: @color-secondary;
+	}
+}
+
+/* DUPLICATED FROM ABOVE MEDIA QUERY FOR RESPONSIVE TOGGLE */
+.responsive-off .main-menu {
+	background-color: @color-secondary;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.responsive header.main .info-col .search-form {
+		background-color: @color-secondary;
+	}
+	.responsive header.main .main-menu > ul {
+    	background-color: @color-secondary;
+    }
+}
+
+
+
+
+/* SPROUT COMMERCE - VARIABLES */
+body {
+  font-family: @font-body-font;
+  color: @color-text;
+}
+
+body,
+h3 span {
+  background: @page-background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-heading-font;
+  color: @color-heading;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: lighten(@color-heading, 30%);
+}
+
+.subheader {
+  color: lighten(@color-heading, 30%);
+}
+
+blockquote, blockquote p {
+  color: lighten(@color-heading, 30%);
+}
+
+blockquote cite {
+  color: lighten(@color-heading, 20%);
+}
+
+blockquote cite a, blockquote cite a:visited {
+  color: lighten(@color-heading, 20%);
+}
+
+abbr, acronym {
+  color: @color-heading;
+}
+
+.tabs dd a, .tabs li a {
+  color: lighten(@color-text, 30%);
+}
+
+.tabs dd.active a, .tabs li.active a {
+  color: lighten(@color-text, 10%);
+}
+
+ul.social-links a {
+  color: fade(@color-social-icons, 60%);
+}
+
+ul.social-links a:active, ul.social-links a:hover {
+  color: @color-social-icons;
+}
+
+.show-reviews i, .rating-stars i,
+.ProductRating i, .rating-stars i {
+  color: @color-rating-stars;
+}
+
+.subcat-grid img {
+  max-width: @setting-subcat-img-width;
+  max-height: @setting-subcat-img-height;
+}
+
+.tooltip,
+.topmenu-header .phone-number a,
+.ProductPrice,
+.ProductPrice strike,
+.panel .select2 a,
+.panel.callout table label {
+  color: @color-text;
+}
+
+@media screen and (max-width: 768px) {
+
+  .responsive .nav > ul #currency-chooser .currencies a {
+    color: @color-text;
+  }
+  
+}
+
+.account-links a, .account-links div,
+.logo a {
+  color: @color-text;
+}
+
+.mobile-cart-link a {
+	background:@color-mobile-cart-link-background;
+	color:@color-mobile-cart-link-text;
+}
+.mobile-cart-link a:hover {
+	background:darken(@color-mobile-cart-link-background,5%);
+	color:@color-mobile-cart-link-text;
+}
+
+.ProductRating i:after,
+.rating-stars i:after,
+.show-reviews i:after {
+  color: fade(@color-rating-stars, 20%);
+}
+
+.account.page .top-menu li,
+.top-menu,
+.nav ul a, .nav ul div,
+.logo,
+.cart .ProductPrice, .IndividualPrice,
+.page .product-list .ProductName, .page .product-grid.List .ProductName,
+.express.checkout #CheckoutStepBillingAddress label,
+.express.checkout .secondary.button,
+.express.checkout .panel .ExpressCheckoutCompletedContent,
+.orbit .slide-heading,
+.orbit .button,
+.promo-banner,
+.button,
+div.alert-box {
+  font-family: @font-heading-font;
+}
+
+.store-credit,
+.cart-link a span,
+table thead tr th, table tfoot tr td,
+.step-number,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+p,
+p.intro,
+blockquote,
+.ProductDetails,
+.on-sale-badge,
+.subcat-grid li a,
+.inline-list.subcategory-list a,
+.orbit,
+.orbit .slide-text,
+footer.main a,
+.account.page p, .account.page li,
+.orbit .slide-text {
+  font-family: @font-body-font;
+}
+
+
+
+/* PRODUCT GRID -- NUM PER ROW */
+/* turn off current margins / clears */
+.page .product-grid li:nth-child(n) { margin-right: 1%; }
+.page .product-grid li:nth-child(n) { clear: none; }
+
+@media only screen and (min-width: 769px) {
+  .page .product-grid li, .page .product-grid li .ProductImage a {
+    width: percentage( (101 / @setting-product-columns - 1 ) / 100);
+  }
+  .page .product-grid li:nth-child(@{setting-product-columns}n+@{setting-product-columns}) {
+    margin-right: 0;
+  }
+  .page .product-grid li:nth-child(@{setting-product-columns}n+1) {
+    clear: left;
+  }
+
+  .sidebar.page .product-grid li, .sidebar.page .product-grid li .ProductImage a {
+    width: percentage( (101 / @setting-product-columns-with-product-filters - 1 ) / 100);
+  }
+  .sidebar.page .product-grid li:nth-child(@{setting-product-columns}n+@{setting-product-columns}) {
+    margin-right: 1%;
+  }
+  .sidebar.page .product-grid li:nth-child(@{setting-product-columns}n+1) {
+    clear: none;
+  }
+  .sidebar.page .product-grid li:nth-child(@{setting-product-columns-with-product-filters}n+@{setting-product-columns-with-product-filters}) {
+    margin-right: 0;
+  }
+  .sidebar.page .product-grid li:nth-child(@{setting-product-columns-with-product-filters}n+1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .responsive .page .product-grid li, .responsive .page .product-grid li .ProductImage a {
+    width: percentage( (101 / @setting-product-columns-tablet - 1 ) / 100);
+  }
+  .responsive .page .product-grid li:nth-child(@{setting-product-columns-tablet}n+@{setting-product-columns-tablet}) {
+    margin-right: 0;
+  }
+  .responsive .page .product-grid li:nth-child(@{setting-product-columns-tablet}n+1) {
+    clear: left;
+  }
+  
+  .responsive .sidebar.page .product-grid li, .responsive .sidebar.page .product-grid li .ProductImage a {
+    width: percentage( (101 / @setting-product-columns-with-product-filters-tablet - 1 ) / 100);
+  }
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-tablet}n+@{setting-product-columns-tablet}) {
+    margin-right: 1%;
+  }
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-tablet}n+1) {
+    clear: none;
+  }
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-with-product-filters-tablet}n+@{setting-product-columns-with-product-filters-tablet}) {
+    margin-right: 0;
+  }
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-with-product-filters-tablet}n+1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .responsive .page .product-grid li, .responsive .page .product-grid li .ProductImage a,
+  .responsive .sidebar.page .product-grid li,
+  .responsive .sidebar.page .product-grid li .ProductImage a {
+    width: percentage( (101 / @setting-product-columns-mobile - 1 ) / 100);
+  }
+  .responsive .product-grid li:nth-child(@{setting-product-columns-mobile}n+@{setting-product-columns-mobile}),
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-mobile}n+@{setting-product-columns-mobile}) {
+    margin-right: 0;
+  }
+  .responsive .product-grid li:nth-child(@{setting-product-columns-mobile}n+1),
+  .responsive .sidebar.page .product-grid li:nth-child(@{setting-product-columns-mobile}n+1) {
+    clear: left;
+  }
+}

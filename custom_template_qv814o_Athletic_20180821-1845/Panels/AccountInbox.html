@@ -1,0 +1,47 @@
+<h2>%%LNG_Inbox%%</h2>
+<div class="alert-box %%GLOBAL_HideMessageSuccess%%" style="display: %%GLOBAL_HideMessageSuccess%%">
+	<div>%%LNG_MessageSendSuccess%%</div>
+	<a href="" class="close">&times;</a>
+</div>
+
+<div class="alert-box %%GLOBAL_HideMessageError%%" style="display: %%GLOBAL_HideMessageError%%">
+	<div>%%LNG_MessageSendError%%</div>
+	<a href="" class="close">&times;</a>
+</div>
+
+<div class="alert-box %%GLOBAL_HideNoOrderMessage%%" style="display: %%GLOBAL_HideNoOrderMessage%%">
+	<div>%%LNG_AccountInboxIntroNoOrders%%</div>
+	<a href="" class="close">&times;</a>
+</div>
+
+<div style="display: %%GLOBAL_HideInbox%%">
+	<p style="display: %%GLOBAL_HideInboxMessage%%">
+		%%GLOBAL_AccountInboxIntro%%
+	</p>
+
+	<ul class="AccountMessageList square">
+		%%SNIPPET_AccountInboxMessage%%
+	</ul>
+
+	<form action="%%GLOBAL_ShopPathSSL%%/account.php?action=send_message" method="post" onsubmit="return check_message_form()" class="PL20">
+		<h6>%%LNG_SendAMessage%%</h6>
+		<dl>
+			<dt><span class="Required">*</span>&nbsp; %%LNG_MessageOrder%%:</dt>
+			<dd>
+				<select name="message_order_id" id="message_order_id" class="Field350 large">
+					%%SNIPPET_AccountInboxOrderItem%%
+				</select>
+			</dd>
+
+			<dt><span class="Required">*</span>&nbsp; %%LNG_MessageSubject%%:</dt>
+			<dd><input type="text" name="message_subject" id="message_subject" class="Textbox Field350"></dd>
+
+			<dt><span class="Required">*</span>&nbsp; %%LNG_MessageContent%%:</dt>
+			<dd><textarea name="message_content" id="message_content" rows="7" cols="50" class="Field350"></textarea></dd>
+		
+			<dt></dt>
+			<dd><input class="button" type="submit" value="%%LNG_SendMessage%%"></dd>
+		</dl>
+	</form>
+</div>
+%%Panel.AccountInboxJavaScript%%

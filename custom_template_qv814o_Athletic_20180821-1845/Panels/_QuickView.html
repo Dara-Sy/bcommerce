@@ -1,0 +1,16 @@
+
+
+<div id="QuickView" class="reveal-modal large">
+	<div class="QuickViewThickBox">
+	</div>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+<script>
+	$(document).ready(function() {
+		var QVButtonText = "%%GLOBAL_QuickViewButtonText%%";
+		
+		if( QVButtonText.length > 0 )
+			$(".product-grid").filter(function(){return !$(this).hasClass('product-list')}).find('li').append('<div class="qv-container"><a class="quickview button small secondary" href="#">'+QVButtonText+'</a></div>');
+	});
+</script>

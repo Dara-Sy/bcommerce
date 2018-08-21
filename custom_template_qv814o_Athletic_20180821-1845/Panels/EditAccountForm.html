@@ -1,0 +1,37 @@
+<div id="EditAccountForm">
+	<h2>%%LNG_YourAccountDetails%%</h2>
+	
+	<p style="display: %%GLOBAL_HideEditAccountIntroMessage%%">
+		%%LNG_EditAccountIntro%%
+	</p>
+	
+	<div class="alert-box %%GLOBAL_HideErrorMessage%%" style="display: %%GLOBAL_HideEditAccountErrorMessage%%">
+		<div>%%GLOBAL_StatusMessage%%</div>
+		<a href="" class="close">&times;</a>
+	</div>
+	
+	<form action="%%GLOBAL_ShopPath%%/account.php?action=update_account" method="post" onsubmit="return check_edit_account_form()" class="PL20">
+		<input type="hidden" name="current_email" value="%%GLOBAL_AccountCurrentEmail%%">
+		<dl>
+			<dt><span class="Required">*</span> %%LNG_FirstName%%:</dt>
+			<dd><input type="text" class="Textbox Field200" name="account_firstname" id="account_firstname" value="%%GLOBAL_AccountFirstName%%"></dd>
+
+			<dt><span class="Required">*</span> %%LNG_LastName%%:</dt>
+			<dd><input type="text" class="Textbox Field200" name="account_lastname" id="account_lastname" value="%%GLOBAL_AccountLastName%%"></dd>
+
+			<dt>&nbsp;&nbsp; %%LNG_CompanyName%%:</dt>
+			<dd><input type="text" class="Textbox Field200" name="account_companyname" id="account_companyname" value="%%GLOBAL_AccountCompanyName%%"></dd>
+
+			<dt><span class="Required">*</span> %%LNG_PhoneNumber%%:</dt>
+			<dd><input type="text" class="Textbox Field200" name="account_phone" id="account_phone" value="%%GLOBAL_AccountPhone%%"></dd>
+
+			%%GLOBAL_AccountFields%%
+			
+			<dt></dt>
+			<dd><p><input class="button" type="submit" value="%%LNG_UpdateMyDetails%%"></p></dd>
+		</dl>
+	</form>
+
+</div>
+
+%%Panel.EditAccountJavaScript%%

@@ -1,0 +1,23 @@
+<li class="left panel bump-right">
+	<h4 class="subheader">%%GLOBAL_ShipFullName%%</h4>
+	
+	<p>
+		%%GLOBAL_ShipCompany%%
+		%%GLOBAL_ShipAddressLine1%%
+		%%GLOBAL_ShipAddressLine2%%<br>
+		%%GLOBAL_ShipSuburb%%, %%GLOBAL_ShipState%% %%GLOBAL_ShipZip%%<br>
+		%%GLOBAL_ShipCountry%%<br>
+		%%GLOBAL_ShipPhone%%
+	</p>
+	
+	<form style="display: %%GLOBAL_HideAddressButton%%" action="%%GLOBAL_ShopPath%%/checkout.php" method="get">
+		<input type="hidden" name="action" value="%%GLOBAL_ShippingFormAction%%">
+		<input type="hidden" name="address_id" value="%%GLOBAL_ShippingAddressId%%">
+		<input class="small button" type="submit" value="%%GLOBAL_ShipAddressButtonText%%" class="MT10">
+	</form>
+	
+	<ul class="button-group radius">
+		<li><a class="small secondary button" href="%%GLOBAL_ShopPath%%/account.php?action=edit_shipping_address&amp;address_id=%%GLOBAL_ShippingAddressId%%&amp;from=%%GLOBAL_FromURL%%"><i class="icon-pencil"></i> %%LNG_Edit%%</a></li>
+		<li><a class="small secondary button" href="%%GLOBAL_ShopPath%%/account.php?action=delete_shipping_address&amp;address_id=%%GLOBAL_ShippingAddressId%%&amp;from=%%GLOBAL_FromURL%%" onclick="confirm_delete_shipping_address(%%GLOBAL_ShippingAddressId%%, '%%GLOBAL_FromURL%%'); return false;"><i class="icon-remove"></i> %%LNG_Delete%%</a></li>
+	</ul>
+</li>

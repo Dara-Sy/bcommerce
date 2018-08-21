@@ -1,0 +1,17 @@
+<div class="panel" id="SideCouponCodeBox">
+	<h4 class="subheader">%%LNG_CouponCode%%</h4>
+	<form onsubmit="return Cart.CheckCouponCode()" action="%%GLOBAL_ShopPath%%/cart.php" method="post">
+		<input type="hidden" name="action" value="applycoupon">
+		<div class="CouponCode">
+			<p>%%LNG_CouponCodeIntro%%</p>
+			<div class="row collapse">
+				<div class="ten mobile-three columns">
+					<input type="text" name="couponcode" id="couponcode" class="Textbox Field100">
+				</div>
+				<div class="two mobile-one columns">
+					<input class="button expand postfix" type="submit" value="Go">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

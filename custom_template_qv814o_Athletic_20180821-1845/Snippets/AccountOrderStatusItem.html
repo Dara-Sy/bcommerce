@@ -1,0 +1,35 @@
+<li class="panel">
+	<form action="%%GLOBAL_ShopPath%%/account.php" method="get" class="right">
+		<input type="hidden" name="action" value="reorder">
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%">
+		<input class="small button" type="submit" value="%%LNG_Reorder%%">
+	</form>
+
+	<form action="%%GLOBAL_ShopPath%%/account.php" method="get" class="right bump-right">
+		<input type="hidden" name="action" value="view_order">
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%">
+		<input class="small button" type="submit" value="%%LNG_ViewOrder%%">
+	</form>
+
+	<h6>%%LNG_Order%% #%%GLOBAL_OrderId%%</h6>
+
+	<div>
+		<p>
+			<span class="secondary label radius">%%LNG_OrderStatus%%:</span> %%GLOBAL_OrderStatus%%<br>
+			<span class="secondary label radius">%%LNG_OrderDate%%:</span> %%GLOBAL_OrderDate%%<br>
+			<span class="label radius">%%LNG_OrderTotal%%:</span> <strong>%%GLOBAL_OrderTotal%%</strong><br>
+		</p>
+
+		<div style="display:%%GLOBAL_HidePaymentInstructions%%">
+			<p class="collapsed"><h4>%%LNG_HeresHowToPayForYourOrder%%:</h4></p>
+			<blockquote style="display:%%GLOBAL_HidePaymentInstructions%%">
+				%%GLOBAL_OrderInstructions%%
+			</blockquote>
+		</div>
+
+		<h4>%%LNG_YourOrderContainsTheFollowingItems2%%</h4>
+		<ul class="OrderItemList square">
+			%%GLOBAL_AccountOrderItemList%%
+		</ul>
+	</div>
+</li>

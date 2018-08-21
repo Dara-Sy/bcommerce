@@ -1,0 +1,20 @@
+<h2>%%LNG_YouRecentlyViewed%%</h2>
+<div style="display: %%GLOBAL_HideRecentItemList%%">
+	<p>%%LNG_AccountRecentItemsIntro%%</p>
+	
+	<form name="frmCompare" id="frmCompare" action="%%GLOBAL_CompareLink%%" method="get" onsubmit="return compareProducts('%%GLOBAL_CompareLink%%')">
+		<div class="product-grid">
+			<ul>
+				%%SNIPPET_AccountRecentItems%%
+			</ul>
+		</div>
+
+		<div class="CompareButton" style="display:%%GLOBAL_HideCompareItems%%">
+			<input class="secondary button" type="submit" value="%%LNG_CompareSelected%%">
+		</div>
+	</form>
+</div>
+
+<p style="display: %%GLOBAL_HideNoRecentItemsMessage%%">
+	%%LNG_AccountNoRecentItems%%
+</p>

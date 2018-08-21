@@ -1,0 +1,47 @@
+%%GLOBAL_AddToCartButtonControlScript%%
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+	<input type="hidden" name="action" value="add">
+	<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%">
+	<input type="hidden" name="variation_id" class="CartVariationId" value="">
+	<input type="hidden" name="currency_id" value="">
+	
+	%%SNIPPET_ProductFieldsList%%
+	
+	<div class="row DetailRow ProductOptionList">
+		<div class="twelve columns">
+			%%SNIPPET_VariationList%%
+		</div>
+	</div>	
+	
+	<div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">
+		%%GLOBAL_ProductAttributeList%%
+	</div>
+
+	%%SNIPPET_EventDate%%
+	
+	<div class="row DetailRow NoLabelRow" style="display: %%GLOBAL_DisplayAdd%%">
+		<div class="Label InputLabel column QuantityInput" style="display: %%GLOBAL_DisplayAddQty%%">%%LNG_QuantityFull%%:</div>
+		<div class="Value column">
+			<span style="display: %%GLOBAL_DisplayAddQty%%;" class="small-input">
+				%%GLOBAL_AddToCartQty%%
+			</span>
+		</div>
+	</div>
+	
+	<div class="row DetailRow AddToCartButtonRow NoLabelRow" style="display: %%GLOBAL_DisplayAdd%%">
+		<div class="Label column"></div>
+		<div class="Value column AddCartButton">
+			
+			<button type="submit" class="large button">
+				<i class="icon-shopping-cart"></i> Add to Cart
+			</button>
+			
+			
+			<div class="BulkDiscountLink" style="display: %%GLOBAL_HideBulkDiscountLink%%;">
+				%%GLOBAL_ProductBulkDiscountThickBox%%
+			</div>
+		</div>
+	</div>
+</form>
+
+%%GLOBAL_EventDateJavascript%%
